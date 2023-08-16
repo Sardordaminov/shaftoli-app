@@ -1,6 +1,8 @@
 import React from "react";
 import "./navbar.css";
 import { BsSearch } from 'react-icons/bs'
+import NavbarBottom from '../navbar-bottom/NavbarBottom'
+import { NavLink } from "react-router-dom";
 
 export default function navbar() {
   return (
@@ -17,10 +19,11 @@ export default function navbar() {
           <label className="search-btn" htmlFor="search"><BsSearch /></label>
         </div>
         <div className="reg-btns">
-          <button className="login btn">Log in</button>
-          <button className="signup btn">Sign up</button>
+          <NavLink to="/login"><button className="login btn">Log in</button></NavLink>
+          <NavLink to="/signup"><button className="signup btn">Sign up</button></NavLink>
         </div>
       </div>
+      <NavbarBottom />
     </>
   );
 }
