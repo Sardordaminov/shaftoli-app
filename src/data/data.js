@@ -11,12 +11,12 @@ import img9 from '../assets/products/img_9.png'
 import img10 from '../assets/products/img_10.png'
 import img11 from '../assets/products/img_11.png'
 
-const products = [
+export const products = [
     {
         id: 1,
         productName: "Samsung Galaxy A51 Red 64 GB",
-        img: img,
-        sliderImg: [
+        image: img,
+        sliderImages: [
             {
                 id: 1,
                 image: img
@@ -25,25 +25,25 @@ const products = [
                 id: 2,
                 image: img1
             },
+            
         ],
-        descr: 'Потрясающий экран, реальная плавная прокрутка',
-        price: '150',
-        color: 'Chameleon',
-        ram: '4GB',
-        memory: '64GB',
-        category: 'Electronic',
-        inFavorite: false,
-        productCondition: 'new',
-
+        descr: "Потрясающий экран, реальная плавная прокрутка",
+        price: "400",
+        color: "cyan",
+        isFavourite: false,
+        pathName: "Electronic",
+        productCondition: "new",
+        memory: "32GB",
+        RAM: "4GB"
     },
     {
         id: 2,
         productName: "Ecase Leather Folio",
-        img: img1,
-        sliderImg: [
+        image: img1,
+        sliderImages: [
             {
                 id: 1,
-                image: img
+                image: img1
             },
             {
                 id: 2,
@@ -51,36 +51,36 @@ const products = [
             },
             {
                 id: 3,
-                image: img1
+                image: img2
             },
             {
                 id: 4,
-                image: img1
+                image: img3
             },
             {
                 id: 5,
-                image: img1
+                image: img4
             },
             {
                 id: 6,
-                image: img1
+                image: img5
             },
         ],
-        descr: 'Smart Watch for you Ecase Leather Folio',
-        price: '32',
-        color: 'Pink',
-        ram: '4GB',
-        memory: '32GB',
-        category: 'Accessories',
-        inFavorite: false,
-        productCondition: 'new',
+        descr: "Smart Watch for you Ecase Leather Folio",
+        price: "32",
+        color: "pink",
+        isFavourite: false,
+        pathName: "Accessories",
+        ProductCondition: "new",
+        Memory: "32GB",
+        RAM: "4GB"
 
     },
     {
         id: 3,
-        productName: "Mechanic keyboard",
-        img: img2,
-        sliderImg: [
+        productName: "Ecase Leather Folio",
+        image: img2,
+        sliderImages: [
             {
                 id: 1,
                 image: img2
@@ -92,23 +92,34 @@ const products = [
             {
                 id: 3,
                 image: img2
-            }
+            },
+            {
+                id: 4,
+                image: img3
+            },
+            {
+                id: 5,
+                image: img4
+            },
+            {
+                id: 6,
+                image: img5
+            },
         ],
-        descr: 'Gaming mechanic keyboard Varmilo',
-        price: '50',
-        color: 'Black',
-        ram: '4GB',
-        memory: '64GB',
-        category: 'Accessories',
-        inFavorite: false,
-        productCondition: 'new',
-
+        descr: "Keyboard mekhanik Ecase Leather Folio",
+        price: "50",
+        color: "black",
+        isFavourite: false,
+        pathName: "Accessories",
+        ProductCondition: "new",
+        Memory: "32GB",
+        RAM: "4GB"
     },
     {
         id: 4,
         productName: "Airpods",
-        img: img3,
-        sliderImg: [
+        image: img3,
+        sliderImages: [
             {
                 id: 1,
                 image: img3
@@ -120,23 +131,34 @@ const products = [
             {
                 id: 3,
                 image: img2
-            }
+            },
+            {
+                id: 4,
+                image: img3
+            },
+            {
+                id: 5,
+                image: img4
+            },
+            {
+                id: 6,
+                image: img5
+            },
         ],
-        descr: 'Airpods pro 2 lux copy',
-        price: '110',
-        color: 'White',
-        ram: '4GB',
-        memory: '64GB',
-        category: 'Accessories',
-        inFavorite: false,
-        productCondition: 'new',
-
+        descr: "Airpods 2.2 white for you",
+        price: "110",
+        color: "white",
+        isFavourite: false,
+        pathName: "Accessories",
+        ProductCondition: "new",
+        Memory: "32GB",
+        RAM: "4GB"
     },
     {
         id: 5,
-        productName: "Hoodie",
-        img: img4,
-        sliderImg: [
+        productName: "Sportswear",
+        image: img4,
+        sliderImages: [
             {
                 id: 1,
                 image: img4
@@ -148,22 +170,34 @@ const products = [
             {
                 id: 3,
                 image: img2
-            }
+            },
+            {
+                id: 4,
+                image: img3
+            },
+            {
+                id: 5,
+                image: img4
+            },
+            {
+                id: 6,
+                image: img5
+            },
         ],
-        descr: 'Soft Sportswear for you',
-        price: '55',
-        color: 'light brown',
-        ram: '4GB',
-        memory: '64GB',
-        category: 'clothes',
-        inFavorite: false,
-        productCondition: 'new',
+        descr: "Soft Sportswear for you",
+        price: "55",
+        color: "white",
+        isFavourite: false,
+        pathName: "Clothes",
+        ProductCondition: "new",
+        Memory: "32GB",
+        RAM: "4GB"
     },
     {
         id: 6,
         productName: "Wash Machine",
-        img: img5,
-        sliderImg: [
+        image: img5,
+        sliderImages: [
             {
                 id: 1,
                 image: img5
@@ -175,49 +209,33 @@ const products = [
             {
                 id: 3,
                 image: img2
-            }
+            },
+            {
+                id: 4,
+                image: img3
+            },
+            {
+                id: 5,
+                image: img4
+            },
+            {
+                id: 6,
+                image: img5
+            },
         ],
-        descr: 'Electrosh Wash Machine for you',
-        price: '600',
-        color: 'gray',
-        ram: '4GB',
-        memory: '64GB',
-        category: 'household-appliances',
-        inFavorite: false,
-        productCondition: 'new',
-    },
-    {
+        descr: "Electrosh Wash Machine for you",
+        price: "200",
+        color: "grey",
+        isFavourite: false,
+        pathName: "Household-appliances",
+        ProductCondition: "new",
+        Memory: "32GB",
+        RAM: "4GB"
+    }, {
         id: 7,
         productName: "Shoes",
-        img: img6,
-        sliderImg: [
-            {
-                id: 1,
-                image: img6
-            },
-            {
-                id: 2,
-                image: img1
-            },
-            {
-                id: 3,
-                image: img2
-            }
-        ],
-        descr: 'Shoe Sneakers for you',
-        price: '95',
-        color: 'white',
-        ram: '8GB',
-        memory: '64GB',
-        category: 'shoes',
-        inFavorite: false,
-        productCondition: 'new',
-    },
-    {
-        id: 8,
-        productName: "Fruits",
-        img: img7,
-        sliderImg: [
+        image: img6,
+        sliderImages: [
             {
                 id: 1,
                 image: img7
@@ -230,11 +248,62 @@ const products = [
                 id: 3,
                 image: img2
             },
+            {
+                id: 4,
+                image: img3
+            },
+            {
+                id: 5,
+                image: img4
+            },
+            {
+                id: 6,
+                image: img5
+            },
+        ],
+        descr: "Shoe Sneakers for you",
+        price: "95",
+        color: "white",
+        isFavourite: false,
+        pathName: "Shoes",
+        ProductCondition: "new",
+        Memory: "32GB",
+        RAM: "4GB"
+    },
+    {
+        id: 8,
+        productName: "Fruits",
+        image: img7,
+        sliderImages: [
+            {
+                id: 1,
+                image: img7
+            },
+            {
+                id: 2,
+                image: img1
+            },
+            {
+                id: 3,
+                image: img2
+            },
+            {
+                id: 4,
+                image: img3
+            },
+            {
+                id: 5,
+                image: img4
+            },
+            {
+                id: 6,
+                image: img5
+            },
         ],
         descr: "Wet Fruits",
         price: "22",
-        category: "Food-products",
-        inFavorite: false,
+        isFavourite: false,
+        pathName: "Food-products",
         ProductCondition: "new",
         Memory: "32GB",
         RAM: "4GB"
@@ -242,8 +311,8 @@ const products = [
     {
         id: 9,
         productName: "Sports products",
-        img: img8,
-        sliderImg: [
+        image: img8,
+        sliderImages: [
             {
                 id: 1,
                 image: img8
@@ -256,12 +325,23 @@ const products = [
                 id: 3,
                 image: img2
             },
+            {
+                id: 4,
+                image: img3
+            },
+            {
+                id: 5,
+                image: img4
+            },
+            {
+                id: 6,
+                image: img5
+            },
         ],
         descr: "Sports products for you",
         price: "310",
-        category: "Sports product",
-        selected: true,
-        inFavorite: false,
+        isFavourite: false,
+        pathName: "Sports-product",
         ProductCondition: "new",
         Memory: "32GB",
         RAM: "4GB"
@@ -269,8 +349,8 @@ const products = [
     {
         id: 10,
         productName: "Samsung Galaxy A51 Red 64 GB",
-        img: img,
-        sliderImg: [
+        image: img,
+        sliderImages: [
             {
                 id: 1,
                 image: img
@@ -283,20 +363,31 @@ const products = [
                 id: 3,
                 image: img2
             },
+            {
+                id: 4,
+                image: img3
+            },
+            {
+                id: 5,
+                image: img4
+            },
+            {
+                id: 6,
+                image: img5
+            },
         ],
         descr: "Потрясающий экран, реальная плавная прокрутка",
         price: "400",
         color: "cyan",
-        category: "Electronic",
-        inFavorite: true,
+        pathName: "Electronic",
         ProductCondition: "new",
         Memory: "32GB",
         RAM: "4GB"
     }, {
         id: 11,
         productName: "Samsung Galaxy A51 Red 64 GB",
-        img: img,
-        sliderImg: [
+        image: img,
+        sliderImages: [
             {
                 id: 1,
                 image: img
@@ -309,20 +400,32 @@ const products = [
                 id: 3,
                 image: img2
             },
+            {
+                id: 4,
+                image: img3
+            },
+            {
+                id: 5,
+                image: img4
+            },
+            {
+                id: 6,
+                image: img5
+            },
         ],
         descr: "Потрясающий экран, реальная плавная прокрутка",
         price: "400",
         color: "cyan",
-        category: "Electronic",
-        inFavorite: true,
+        isFavourite: true,
+        pathName: "Electronic",
         ProductCondition: "new",
         Memory: "32GB",
         RAM: "4GB"
     }, {
         id: 12,
         productName: "Samsung Galaxy A51 Red 64 GB",
-        img: img,
-        sliderImg: [
+        image: img,
+        sliderImages: [
             {
                 id: 1,
                 image: img
@@ -331,20 +434,36 @@ const products = [
                 id: 2,
                 image: img1
             },
+            {
+                id: 3,
+                image: img2
+            },
+            {
+                id: 4,
+                image: img3
+            },
+            {
+                id: 5,
+                image: img4
+            },
+            {
+                id: 6,
+                image: img5
+            },
         ],
         descr: "Потрясающий экран, реальная плавная прокрутка",
         price: "400",
         color: "cyan",
-        category: "Electronic",
-        inFavorite: true,
+        isFavourite: true,
+        pathName: "Electronic",
         ProductCondition: "new",
         Memory: "32GB",
         RAM: "4GB"
     }, {
         id: 13,
         productName: "Sports products",
-        img: img8,
-        sliderImg: [
+        image: img8,
+        sliderImages: [
             {
                 id: 1,
                 image: img8
@@ -372,16 +491,16 @@ const products = [
         ],
         descr: "Sports products for you",
         price: "310",
-        category: "Sports product",
-        inFavorite: false,
+        isFavourite: false,
+        pathName: "Sports-product",
         ProductCondition: "new",
         Memory: "32GB",
         RAM: "4GB"
     }, {
         id: 14,
         productName: "Sports products",
-        img: img8,
-        sliderImg: [
+        image: img8,
+        sliderImages: [
             {
                 id: 1,
                 image: img8
@@ -409,16 +528,16 @@ const products = [
         ],
         descr: "Sports products for you",
         price: "310",
-        category: "Sports product",
-        inFavorite: false,
+        isFavourite: false,
+        pathName: "Sports-product",
         ProductCondition: "new",
         Memory: "32GB",
         RAM: "4GB"
     }, {
         id: 15,
         productName: "Sports products",
-        img: img8,
-        sliderImg: [
+        image: img8,
+        sliderImages: [
             {
                 id: 1,
                 image: img8
@@ -446,8 +565,8 @@ const products = [
         ],
         descr: "Sports products for you",
         price: "310",
-        category: "Sports product",
-        inFavorite: false,
+        isFavourite: false,
+        pathName: "Sports-product",
         ProductCondition: "new",
         Memory: "32GB",
         RAM: "4GB"
@@ -455,8 +574,8 @@ const products = [
     {
         id: 16,
         productName: "Shoes",
-        img: img6,
-        sliderImg: [
+        image: img6,
+        sliderImages: [
             {
                 id: 1,
                 image: img6
@@ -485,8 +604,8 @@ const products = [
         descr: "Shoe Sneakers for you",
         price: "95",
         color: "white",
-        category: "Shoes",
-        inFavorite: false,
+        isFavourite: false,
+        pathName: "Shoes",
         ProductCondition: "new",
         Memory: "32GB",
         RAM: "4GB"
@@ -494,8 +613,8 @@ const products = [
     {
         id: 17,
         productName: "Shoes",
-        img: img6,
-        sliderImg: [
+        image: img6,
+        sliderImages: [
             {
                 id: 1,
                 image: img6
@@ -524,8 +643,8 @@ const products = [
         descr: "Shoe Sneakers for you",
         price: "95",
         color: "white",
-        category: "Shoes",
-        inFavorite: false,
+        isFavourite: false,
+        pathName: "Shoes",
         ProductCondition: "new",
         Memory: "32GB",
         RAM: "4GB"
@@ -534,8 +653,8 @@ const products = [
     {
         id: 18,
         productName: "Shoes",
-        img: img6,
-        sliderImg: [
+        image: img6,
+        sliderImages: [
             {
                 id: 1,
                 image: img6
@@ -564,8 +683,8 @@ const products = [
         descr: "Shoe Sneakers for you",
         price: "95",
         color: "white",
-        category: "Shoes",
-       inFavorite: false,
+        isFavourite: false,
+        pathName: "Shoes",
         ProductCondition: "new",
         Memory: "32GB",
         RAM: "4GB"
@@ -602,9 +721,6 @@ const products = [
         descr: "Soft Sportswear for you",
         price: "55",
         color: "white",
-        category: "Clothes",
-        quantity: 1,
-        selected: true,
         isFavourite: false,
         pathName: "Clothes",
         ProductCondition: "new",
@@ -643,9 +759,6 @@ const products = [
         descr: "Soft Sportswear for you",
         price: "55",
         color: "white",
-        category: "Clothes",
-        quantity: 1,
-        selected: true,
         isFavourite: false,
         pathName: "Clothes",
         ProductCondition: "new",
@@ -684,9 +797,6 @@ const products = [
         descr: "Soft Sportswear for you",
         price: "55",
         color: "white",
-        category: "Clothes",
-        quantity: 1,
-        selected: true,
         isFavourite: false,
         pathName: "Clothes",
         ProductCondition: "new",
@@ -725,9 +835,6 @@ const products = [
         descr: "Electrosh Wash Machine for you",
         price: "200",
         color: "grey",
-        category: "Household appliances",
-        quantity: 1,
-        selected: true,
         isFavourite: false,
         pathName: "Household-appliances",
         ProductCondition: "new",
@@ -766,9 +873,6 @@ const products = [
         descr: "Electrosh Wash Machine for you",
         price: "200",
         color: "grey",
-        category: "Household appliances",
-        quantity: 1,
-        selected: true,
         isFavourite: false,
         pathName: "Household-appliances",
         ProductCondition: "new",
@@ -807,9 +911,6 @@ const products = [
         descr: "Electrosh Wash Machine for you",
         price: "200",
         color: "grey",
-        category: "Household appliances",
-        quantity: 1,
-        selected: true,
         isFavourite: false,
         pathName: "Household-appliances",
         ProductCondition: "new",
@@ -848,9 +949,6 @@ const products = [
         descr: "Electrosh Wash Machine for you",
         price: "200",
         color: "grey",
-        category: "Household appliances",
-        quantity: 1,
-        selected: true,
         isFavourite: false,
         pathName: "Household-appliances",
         ProductCondition: "new",
@@ -889,9 +987,6 @@ const products = [
         ],
         descr: "Wet Fruits",
         price: "22",
-        category: "Food products",
-        quantity: 1,
-        selected: true,
         isFavourite: false,
         pathName: "Food-products",
         ProductCondition: "new",
@@ -929,9 +1024,6 @@ const products = [
         ],
         descr: "Wet Fruits",
         price: "22",
-        category: "Food products",
-        quantity: 1,
-        selected: true,
         isFavourite: false,
         pathName: "Food-products",
         ProductCondition: "new",
@@ -971,9 +1063,6 @@ const products = [
         ],
         descr: "Wet Fruits",
         price: "22",
-        category: "Food products",
-        quantity: 1,
-        selected: true,
         isFavourite: false,
         pathName: "Food-products",
         ProductCondition: "new",
@@ -1013,9 +1102,6 @@ const products = [
         descr: "Airpods 2.2 white for you",
         price: "110",
         color: "white",
-        category: "Accessories",
-        quantity: 1,
-        selected: true,
         isFavourite: false,
         pathName: "Accessories",
         ProductCondition: "new",
@@ -1054,9 +1140,6 @@ const products = [
         ],
         descr: "Auto commodities for you water",
         price: "110",
-        category: "Auto commodities",
-        quantity: 1,
-        selected: true,
         isFavourite: false,
         pathName: "Auto-commodities",
         ProductCondition: "new",
@@ -1095,9 +1178,6 @@ const products = [
         ],
         descr: "Auto commodities for you water",
         price: "110",
-        category: "Auto commodities",
-        quantity: 1,
-        selected: true,
         isFavourite: false,
         pathName: "Auto-commodities",
         ProductCondition: "new",
@@ -1136,9 +1216,6 @@ const products = [
         ],
         descr: "Auto commodities for you water",
         price: "110",
-        category: "Auto commodities",
-        quantity: 1,
-        selected: true,
         isFavourite: false,
         pathName: "Auto-commodities",
         ProductCondition: "new",
@@ -1177,9 +1254,6 @@ const products = [
         ],
         descr: "Auto commodities for you water",
         price: "110",
-        category: "Auto commodities",
-        quantity: 1,
-        selected: true,
         isFavourite: false,
         pathName: "Auto-commodities",
         ProductCondition: "new",
@@ -1218,9 +1292,6 @@ const products = [
         ],
         descr: "Glue for you and other think",
         price: "110",
-        category: "Construction and repair",
-        quantity: 1,
-        selected: true,
         isFavourite: false,
         pathName: "Construction-and-repair",
         ProductCondition: "new",
@@ -1259,9 +1330,6 @@ const products = [
         ],
         descr: "Glue for you and other think",
         price: "110",
-        category: "Construction and repair",
-        quantity: 1,
-        selected: true,
         isFavourite: false,
         pathName: "Construction-and-repair",
         ProductCondition: "new",
@@ -1300,9 +1368,6 @@ const products = [
         ],
         descr: "Glue for you and other think",
         price: "110",
-        category: "Construction and repair",
-        quantity: 1,
-        selected: true,
         isFavourite: false,
         pathName: "Construction-and-repair",
         ProductCondition: "new",
@@ -1341,9 +1406,6 @@ const products = [
         ],
         descr: "Glue for you and other think",
         price: "110",
-        category: "Construction and repair",
-        quantity: 1,
-        selected: true,
         isFavourite: false,
         pathName: "Construction-and-repair",
         ProductCondition: "new",
@@ -1382,9 +1444,6 @@ const products = [
         ],
         descr: "Book about life Stiv Jobs",
         price: "110",
-        category: "Books",
-        quantity: 1,
-        selected: true,
         isFavourite: false,
         pathName: "Books",
         ProductCondition: "new",
@@ -1423,9 +1482,6 @@ const products = [
         ],
         descr: "Book about life Stiv Jobs",
         price: "110",
-        category: "Books",
-        quantity: 1,
-        selected: true,
         isFavourite: false,
         pathName: "Books",
         ProductCondition: "new",
@@ -1464,9 +1520,6 @@ const products = [
         ],
         descr: "Book about life Stiv Jobs",
         price: "110",
-        category: "Books",
-        quantity: 1,
-        selected: true,
         isFavourite: false,
         pathName: "Books",
         ProductCondition: "new",
@@ -1505,9 +1558,6 @@ const products = [
         ],
         descr: "Book about life Stiv Jobs",
         price: "110",
-        category: "Books",
-        quantity: 1,
-        selected: true,
         isFavourite: false,
         pathName: "Books",
         ProductCondition: "new",
