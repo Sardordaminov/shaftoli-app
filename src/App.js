@@ -1,6 +1,6 @@
 import Navbar from './components/navbar-main/navbar'
 import Footer from './components/footer/Footer'
-import { Routes } from 'react-router-dom';
+import { Routes } from './routes'
 
 function App() {
   return (

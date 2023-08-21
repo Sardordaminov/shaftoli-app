@@ -25,7 +25,7 @@ export const products = [
                 id: 2,
                 image: img1
             },
-            
+
         ],
         descr: "Потрясающий экран, реальная плавная прокрутка",
         price: "400",
@@ -1563,5 +1563,105 @@ export const products = [
         ProductCondition: "new",
         Memory: "32GB",
         RAM: "4GB"
+    },
+];
+
+export const categoryList = [
+    {
+        id: 1,
+        categoryName: "Electronic",
+        icon: <i className="fa-regular fa-computer"></i>
+    },
+    {
+        id: 2,
+        categoryName: "Household appliances",
+        icon: <i className="fa-regular fa-blender"></i>
+    },
+    {
+        id: 3,
+        categoryName: "CLothes",
+        icon: <i className="fa-solid fa-shirt"></i>
+    },
+    {
+        id: 4,
+        categoryName: "Shoes",
+        icon: <i className="fa-regular fa-boot-heeled"></i>
+    },
+    {
+        id: 5,
+        categoryName: "Accessories",
+        icon: <i className="fa-regular fa-mobile-notch"></i>
+    },
+    {
+        id: 6,
+        categoryName: "Auto commodities",
+        icon: <i className="fa-solid fa-car"></i>
+    },
+    {
+        id: 7,
+        categoryName: "Construction and repair",
+        icon: <i className="fa-regular fa-wrench"></i>
+    },
+    {
+        id: 8,
+        categoryName: "Food products",
+        icon: <i className="fa-regular fa-burger-soda"></i>
+    },
+    {
+        id: 9,
+        categoryName: "Books",
+        icon: <i className="fa-regular fa-book"></i>
+    },
+    {
+        id: 10,
+        categoryName: "Sport product",
+        icon: <i className="fa-regular fa-football"></i>
+    },
+]
+
+export const faqData = [
+    {
+        id: 1,
+        question: "How to order?",
+        answer: "" +
+            "1. Add items to your shopping cart.\n" +
+            "2 .Check the quantity and characteristics of the item, such as size and color.\n" +
+            "3. Click 'Finish'.\n" +
+            "4. In the checkout section, specify the delivery method - to the point of issue or by courier.\n" +
+            "5. Enter and verify the details of the recipient of the order. Why this is important: the phone will receive an order issuance code. The name and surname will be needed for verification with the passport if you ordered a product with an age limit or used a promo code.\n" +
+            "6. Enter a promo code if you have one. Current promotional codes can be found on the website https://e-commerce-apezon.vercel.app, in our social networks, push notifications or SMS.\n" +
+            "7. Pay for the order. Choose a payment method convenient for you:\n" +
+            "pay online with Uzcard, Humo, or pay in installments;\n" +
+            "pay upon receipt in cash or by Uzcard, Humo, available payment systems MasterCard, Visa.\n" +
+            "8. If you decide to pay later, the order will be in reserve for another 30 minutes.\n" +
+            "9. When paying for an order online by card or in installments, a payment receipt will appear in your account under the order - \"Electronic receipt\".\n"
+    }, {
+        id: 2,
+        question: "How do I add or remove an item from a placed order?\n",
+        answer: "We collect and ship orders very quickly - only a couple of minutes pass between payment and assembly of your order. Therefore, we technically cannot add or remove items from a placed and paid order.\n" +
+            "Если вы хотите дозаказать товары, оформите их отдельно и заберите вместе с первым заказом. Если хотите удалить — откажитесь от ненужных в пункте выдачи."
+    }, {
+        id: 3,
+        question: "How can I track an order?\n",
+        answer: "The order can be tracked by status. It will be displayed in the section \"Account\" - \"My orders\" - \"All\". Orders go through several stages of delivery:\n" +
+            "1. \"Awaiting payment\" - you placed an order, but did not complete the payment. Status changes can take up to an hour.\n" +
+            "2. \"Assembling\" - we pack the goods in the warehouse and prepare them for shipment.\n" +
+            "3. \"Delivered\" - the order is on its way.\n" +
+            "4. \"You can pick up\" - the order has arrived.\n" +
+            "5. “Issued to the buyer / Returned” - the goods are with you, or you refused the order.\n"
+    }, {
+        id: 4,
+        question: "How to receive an order?\n",
+        answer: "How to receive an order?\n" +
+            "1. Show the barcode from the application. It is located in your personal account, in the \"My Orders\" section.\n" +
+            "2. Tell us the order number and the issuance code that we sent via SMS or in a push notification.\n"
+    }, {
+        id: 5,
+        question: "How to change the phone number in the profile?\n",
+        answer: "If you have changed your phone number, just register a new account. But remember: when you re-register, you will not be able to see information on old orders or leave reviews for them.\n"
+    }, {
+        id: 6,
+        question: "Delivery Terms\n",
+        answer: "The delivery date is always displayed during the payment of the order and immediately after it. We recommend paying attention to this. Delivery time depends on the distance of your city from the Uzum warehouse.\n"
     },
 ]

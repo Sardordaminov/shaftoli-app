@@ -2,13 +2,13 @@ import React from "react";
 import "./navbar.css";
 import { BsSearch } from 'react-icons/bs'
 import NavbarBottom from '../navbar-bottom/NavbarBottom'
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 export default function navbar() {
   return (
     <>
       <div className="navbar-main">
-        <h1 className="navbar-main-title">SHAFTOLI MARKET</h1>
+        <Link to="/"><h1 className="navbar-main-title">SHAFTOLI MARKET</h1></Link>
         <div className="navbar-main-searchbox">
           <input
             className="navbar-main-search"
