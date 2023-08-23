@@ -1,5 +1,5 @@
 import Navbar from './components/navbar-main/navbar'
-import Footer from './components/footer/Footer'
+import Footer from './components/footer/footer-top/FooterTop'
 import { Routes } from './routes'
 
 function App() {
