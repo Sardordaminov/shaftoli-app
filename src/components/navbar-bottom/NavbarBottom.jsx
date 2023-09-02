@@ -11,7 +11,7 @@ export default function NavbarBottom() {
       <div className={`navbar-bottom-left ${opener && "active"}`}>
         <div className="category-opener" onClick={() => setOpener(!opener)}>
           <div className={`category-opener-item`}>
-            <i class="fa-regular fa-rectangle-history"></i>
+            <i className="fa-regular fa-rectangle-history"></i>
             <i className='fa-solid fa-xmark'></i>
           </div>
         </div>
@@ -22,8 +22,8 @@ export default function NavbarBottom() {
         <NavLink className="btns" to="/myorder">My Order</NavLink>
       </div>
       <div className="navbar-bottom-right">
-        <NavLink to="/wishlist"><div className='wishlist btns'><i class="fa-light fa-heart"></i> Wishlist</div></NavLink>
-        <NavLink to="/cart"><div className='cart btns'><i class="fa-light fa-cart-shopping"></i> Cart</div></NavLink>
+        <NavLink to="/wishlist"><div className='wishlist btns'><i className="fa-light fa-heart"></i> Wishlist</div></NavLink>
+        <NavLink to="/cart"><div className='cart btns'><i className="fa-light fa-cart-shopping"></i> Cart</div></NavLink>
       </div>
     </div>
   )

@@ -59,7 +59,7 @@ function Slide() {
 
     return (
         <>
-            <div className={"banner"}>
+            <div className="banner">
                 <Swiper {...params} modules={[Pagination, Autoplay]} className="mySwiper">
                     <SwiperSlide><img src="https://images.uzum.uz/cggpeafg49devoabrdbg/main_page_banner.jpg"
                         alt="" /></SwiperSlide>

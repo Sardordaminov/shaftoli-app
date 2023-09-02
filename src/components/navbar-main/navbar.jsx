@@ -20,7 +20,7 @@ export default function navbar() {
         </div>
         <div className="reg-btns">
           <NavLink to="/login"><button className="login btn">Log in</button></NavLink>
-          <NavLink to="/signup"><button className="signup btn">Sign up</button></NavLink>
+          <NavLink to="/signup"><button className="Signup btn">Sign up</button></NavLink>
         </div>
       </div>
       <NavbarBottom />
