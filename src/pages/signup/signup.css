@@ -21,6 +21,7 @@
     width: 100%;
 }
 .input{
+    position: relative;
     display: flex;
     flex-direction: column;
     margin: 20px 0px;
@@ -28,6 +29,11 @@
 .input label{
     margin: 0px 0px 10px 0px;
     font-size: 16px;
+}
+.input p{
+    position: absolute;
+    top: 55px;
+    left: 20px;
 }
 .input input{
     margin: 5px 0px;
@@ -37,6 +43,11 @@
     outline: none;
     border: 2px solid #eee;
     border-radius: 10px;
+    font-size: 15px;
+}
+.number-input{
+    padding-top: 2px;
+    padding-left: 66px !important;
 }
 .signup-btn{
     width: 100%;
