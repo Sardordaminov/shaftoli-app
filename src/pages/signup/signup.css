@@ -45,6 +45,13 @@
     border-radius: 10px;
     font-size: 15px;
 }
+.input input:focus{
+    border: 2px solid #f07865;
+}
+.input h4{
+    font-size: 13px;
+    color: red;
+}
 .number-input{
     padding-top: 2px;
     padding-left: 66px !important;
