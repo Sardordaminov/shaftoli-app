@@ -6,9 +6,10 @@ const Signup = () => {
   document.title = "Sign up"
 
   const [phoneNumber, setPhoneNumber] = useState("");
-  const [password, setPassword] = useState(""); // Initialize phoneNumber state
+  const [password, setPassword] = useState("");
+  const [confirmpass, setConfirmpass] = useState("")
+  const [show, setShow] = useState(false);
 
-  // Function to handle changes in the number-input field
   const phonenumber = (e) => {
     const value = e.target.value;
     // console.log(`Number Input Length: ${value.length}`);
@@ -22,16 +23,28 @@ const Signup = () => {
   };
   const Password = (e) => {
     const value = e.target.value;
-    // console.log(`Number Input Length: ${value.length}`);
     if (value.length <= 0) {
       setPassword("Required")
-    } else if (value.length === 9) {
+    } else if (value.length < 8) {
+      setPassword('Password must be at least 8 characters')
+    } else {
       setPassword('')
-    } else if (value.length > 9 || value.length < 9) {
-      setPassword('Must be a phone number in Uzbekistan')
     }
   };
-  
+  const handleShow = () => {
+    setShow(!show)
+  }
+
+  const confirmPass = (e) => {
+    const passValue = e.target.value;
+    if (password.length == passValue.length) {
+      setConfirmpass("")
+    } else if (passValue.length === 0) {
+      setConfirmpass("Required")
+    } else {
+      setConfirmpass("Passwords must match")
+    }
+  }
 
   return (
     <div className='signup-page'>
@@ -46,12 +59,14 @@ const Signup = () => {
           </div>
           <div className="input">
             <label htmlFor="password">Password:</label>
-            <input type="password" placeholder='Password' className='password' onFocus={Password} onChange={Password}/>
+            <input type={show ? "text" : "password"} placeholder='Password' className='password' onFocus={Password} onChange={Password} />
+            <button className='show' onClick={handleShow}><i className={show ? 'fa-regular fa-eye' : 'fa-regular fa-eye-slash'}></i></button>
             <h4 className='password-alert'>{password}</h4>
           </div>
           <div className="input">
             <label htmlFor="password">Confirm Password:</label>
-            <input type="password" placeholder='Confirm Password' className='password confirm' />
+            <input type="password" placeholder='Confirm Password' className='password confirm' onChange={confirmPass} onFocus={confirmPass} />
+            <h4 className='confirm-alert'>{confirmpass}</h4>
           </div>
           <button type='submit' className='signup-btn'>Sign up</button>
         </div>

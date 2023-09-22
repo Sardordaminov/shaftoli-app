@@ -48,6 +48,16 @@
 .input input:focus{
     border: 2px solid #f07865;
 }
+.show{
+    position: absolute;
+    right: 20px;
+    top: 54px;
+    font-size: 17px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: #858585;
+}
 .input h4{
     font-size: 13px;
     color: red;
