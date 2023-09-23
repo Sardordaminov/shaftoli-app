@@ -5,7 +5,6 @@ import Categories from '../categories/categories';
 
 export default function NavbarBottom() {
   let [opener, setOpener] = useState(false)
-  console.log(opener);
   return (
     <div className='navbar-bottom'>
       <div className={`navbar-bottom-left ${opener && "active"}`}>

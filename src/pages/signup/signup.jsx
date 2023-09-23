@@ -9,6 +9,9 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const [confirmpass, setConfirmpass] = useState("")
   const [show, setShow] = useState(false);
+  const [passwordValue, setPasswordValue] = useState(0)
+  const [numberValue, setNumberValue] = useState(0)
+
 
   const phonenumber = (e) => {
     const value = e.target.value;
@@ -20,6 +23,7 @@ const Signup = () => {
     } else if (value.length > 9 || value.length < 9) {
       setPhoneNumber('Must be a phone number in Uzbekistan')
     }
+    setNumberValue(value)
   };
   const Password = (e) => {
     const value = e.target.value;
@@ -30,21 +34,34 @@ const Signup = () => {
     } else {
       setPassword('')
     }
+    setPasswordValue(value)
   };
+
   const handleShow = () => {
     setShow(!show)
   }
 
   const confirmPass = (e) => {
-    const passValue = e.target.value;
-    if (password.length == passValue.length) {
+    const value = e.target.value;
+    if (value.length <= 0) {
+      setConfirmpass('Required')
+    } else if (value === passwordValue) {
       setConfirmpass("")
-    } else if (passValue.length === 0) {
-      setConfirmpass("Required")
     } else {
-      setConfirmpass("Passwords must match")
+      setConfirmpass('Passwords must match')
     }
   }
+
+  const handleSignup = () => {
+    localStorage.setItem('phoneNumber', numberValue);
+    localStorage.setItem('password', passwordValue);
+
+    if (numberValue.length <= 0) {
+      
+    } else {
+      
+    }
+  };
 
   return (
     <div className='signup-page'>
@@ -65,10 +82,10 @@ const Signup = () => {
           </div>
           <div className="input">
             <label htmlFor="password">Confirm Password:</label>
-            <input type="password" placeholder='Confirm Password' className='password confirm' onChange={confirmPass} onFocus={confirmPass} />
+            <input type={show ? "text" : "password"} placeholder='Confirm Password' className='password confirm' onChange={confirmPass} onFocus={confirmPass} />
             <h4 className='confirm-alert'>{confirmpass}</h4>
           </div>
-          <button type='submit' className='signup-btn'>Sign up</button>
+          <button type='submit' className='signup-btn' onClick={handleSignup}>Sign up</button>
         </div>
         <div className="signup-bottom">Already have an account? <Link to="/login">Log In</Link></div>
       </div>
