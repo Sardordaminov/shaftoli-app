@@ -1,6 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import "./signup.css"
 import { Link } from 'react-router-dom'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Signup = () => {
   document.title = "Sign up"
@@ -12,18 +14,32 @@ const Signup = () => {
   const [passwordValue, setPasswordValue] = useState(0)
   const [numberValue, setNumberValue] = useState(0)
 
+  const [signUpIndex, setSignUpIndex] = useState(0);
+
+  useEffect(() => {
+    const savedSignUpIndex = localStorage.getItem('signUpIndex');
+    if (savedSignUpIndex) {
+      setSignUpIndex(parseInt(savedSignUpIndex));
+    }
+  }, []);
+
+  const incrementSignUpIndex = () => {
+    const newIndex = signUpIndex + 1;
+    setSignUpIndex(newIndex);
+    localStorage.setItem('signUpIndex', newIndex.toString());
+    return newIndex;
+  };
 
   const phonenumber = (e) => {
     const value = e.target.value;
-    // console.log(`Number Input Length: ${value.length}`);
     if (value.length <= 0) {
       setPhoneNumber("Required")
     } else if (value.length === 9) {
       setPhoneNumber('')
+      setNumberValue(value)
     } else if (value.length > 9 || value.length < 9) {
       setPhoneNumber('Must be a phone number in Uzbekistan')
     }
-    setNumberValue(value)
   };
   const Password = (e) => {
     const value = e.target.value;
@@ -33,8 +49,9 @@ const Signup = () => {
       setPassword('Password must be at least 8 characters')
     } else {
       setPassword('')
+      setPasswordValue(value)
     }
-    setPasswordValue(value)
+
   };
 
   const handleShow = () => {
@@ -52,19 +69,80 @@ const Signup = () => {
     }
   }
 
-  const handleSignup = () => {
-    localStorage.setItem('phoneNumber', numberValue);
-    localStorage.setItem('password', passwordValue);
 
-    if (numberValue.length <= 0) {
-      
+  const handleSignup = () => {
+    const index = incrementSignUpIndex();
+
+    // const timestamp = new Date().getTime();
+    // const phoneKey = `phoneNumber_${index}`;
+    // const passwordKey = `password_${index}`;
+
+    if (numberValue === 0) {
+      toast.error('Please fill number input', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    } else if (passwordValue === 0) {
+      toast.error('So fill password input too :)', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    } else if (confirmpass.includes("Passwords must match") || confirmpass.includes("Required")) {
+      toast.error('Hey lil nigga fill confirm pass !!', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     } else {
-      
+      toast.success('🥳 You have registered', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+      // localStorage.setItem(phoneKey, numberValue);
+      // localStorage.setItem(passwordKey, passwordValue);
+
+      localStorage.setItem(`phoneNumber_${index}`, numberValue);
+      localStorage.setItem(`password_${index}`, passwordValue);
     }
   };
 
   return (
     <div className='signup-page'>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
       <div className='signup'>
         <h1 className='signup-title'>Sign Up</h1>
         <div className='inputs'>
